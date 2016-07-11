@@ -6,3 +6,4 @@ package com.myandroidview.rxjava;
 public class RxJavaDemo {
     //
 }
+

@@ -9,12 +9,13 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:persistent="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name="com.myandroidview.eventbus.SecondActivity" />
 
         <receiver android:name=".MyReceiver">
@@ -26,11 +27,12 @@
 
         <activity android:name="com.myandroidview.eventbus2.MainActivity" />
         <activity android:name="com.myandroidview.eventbus2.SecondActivity" />
-        <activity android:name="com.myandroidview.eventbus3.EventBusFirstActivity">
-
-        </activity>
+        <activity android:name="com.myandroidview.eventbus3.EventBusFirstActivity"></activity>
         <activity android:name="com.myandroidview.eventbus3.EventBusSecondActivity" />
         <activity android:name="com.myandroidview.rxjava.RxJavaDemoActivity">
+
+        </activity>
+        <activity android:name="com.myandroidview.view.canvas.CanvasDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

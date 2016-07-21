@@ -6,11 +6,15 @@
     tools:context="com.myandroidview.view.canvas.CanvasDemoActivity">
 
 
-            <com.myandroidview.view.canvas.SloopView2
+    <!-- <com.myandroidview.view.canvas.SloopView2
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+-->
 
-
+    <com.myandroidview.view.canvas.PieView
+        android:id="@+id/pieview"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
 
 
 </RelativeLayout>

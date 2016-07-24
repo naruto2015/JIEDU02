@@ -43,6 +43,10 @@ public class PieView extends View {
     //画笔
     private Paint mPaint=new Paint();
 
+
+    /*
+    确定View大小(记录当前View的宽高)
+     */
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);

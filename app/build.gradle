@@ -26,4 +26,5 @@ dependencies {
     compile files('libs/rxandroid-1.1.0.jar')
     compile files('libs/rxjava-1.1.1.jar')
     compile files('libs/eventbus.jar')
+    compile 'com.android.support:recyclerview-v7:24.0.0-beta1'
 }

@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.myandroidview.activity.R;
 import com.myandroidview.eventbus.FirstEvent;
 import com.myandroidview.eventbus.SecondActivity;
 
@@ -20,22 +19,17 @@ public class MainActivity extends Activity {
 
     Button btn;
     TextView tv;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);//
-
         EventBus.getDefault().register(this);
-
         btn = (Button) findViewById(R.id.btn_try);
         tv = (TextView)findViewById(R.id.tv);
 
         btn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Intent intent = new Intent(getApplicationContext(),
                         SecondActivity.class);
                 startActivity(intent);
@@ -44,7 +38,6 @@ public class MainActivity extends Activity {
     }
 
     public void onEventMainThread(FirstEvent event) {
-
         String msg = "onEventMainThread收到了消息：" + event.getMsg();
         Log.d("harvic", msg);
         tv.setText(msg);

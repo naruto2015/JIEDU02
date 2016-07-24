@@ -23,9 +23,19 @@ public class SloopView3 extends View{
     }
     private Paint mPaint=new Paint();
     private void initPaint(){
-        mPaint.setColor(Color.BLACK);
+        //mPaint.setColor(Color.BLACK);
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setStrokeWidth(10f);
+
+    }
+
+    private int mHeight,mWidth;
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        mHeight=h;
+        mWidth=w;
 
     }
 
@@ -33,11 +43,41 @@ public class SloopView3 extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        //translate 是每次相对于当前坐标系的位置移动
+      /*  canvas.translate(200,200);
+        mPaint.setColor(Color.BLACK);
+        canvas.drawCircle(0,0,100,mPaint);
+
+        canvas.translate(200,200);
+        mPaint.setColor(Color.BLUE);
+        canvas.drawCircle(0,0,100,mPaint);*/
 
 
+      /*
+        canvas.translate(mWidth/2,mHeight/2);
+        mPaint.setColor(Color.BLACK);
+        RectF rectF=new RectF(0,-400,400,0);
+        canvas.drawRect(rectF,mPaint);
 
+        mPaint.setColor(Color.BLUE);
+        canvas.scale(0.5f,0.5f);
+        //canvas.scale(0.5f,0.5f,200,0);  画布缩放，缩放中心向右便宜200px
+        canvas.drawRect(rectF,mPaint);
+        */
 
+        mPaint.setColor(Color.BLUE);
+        RectF rectF=new RectF(-400,-400,400,400);
+        canvas.translate(mWidth/2,mHeight/2);
+        canvas.drawRect(rectF,mPaint);
+        for(int i=0;i<20;i++){
 
+            //scale 与 translet一样也是叠加的
+            canvas.scale(0.9f,0.9f);
+            canvas.drawRect(rectF,mPaint);
+
+        }
 
     }
+
+
 }

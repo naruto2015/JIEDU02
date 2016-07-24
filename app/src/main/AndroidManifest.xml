@@ -27,11 +27,9 @@
 
         <activity android:name="com.myandroidview.eventbus2.MainActivity" />
         <activity android:name="com.myandroidview.eventbus2.SecondActivity" />
-        <activity android:name="com.myandroidview.eventbus3.EventBusFirstActivity"></activity>
+        <activity android:name="com.myandroidview.eventbus3.EventBusFirstActivity" />
         <activity android:name="com.myandroidview.eventbus3.EventBusSecondActivity" />
-        <activity android:name="com.myandroidview.rxjava.RxJavaDemoActivity">
-
-        </activity>
+        <activity android:name="com.myandroidview.rxjava.RxJavaDemoActivity" />
         <activity android:name="com.myandroidview.view.canvas.CanvasDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,6 +37,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.myandroidview.view.canvas.CanvasDemo02Activity" />
+        <activity android:name="com.myandroidview.recycleview.RecycleViewDemoActivity"></activity>
     </application>
 
 </manifest>

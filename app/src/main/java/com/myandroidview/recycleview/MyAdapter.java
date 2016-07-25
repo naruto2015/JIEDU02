@@ -1,6 +1,7 @@
 package com.myandroidview.recycleview;
 
 import android.content.Context;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,15 +28,32 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         int type=getItemViewType(viewType);
         View view=null;
-        if(type==1){
+        if(type==0){
             view=LayoutInflater.from(context).inflate(R.layout.headview,parent,false);
 
-        }else if(type==2){
-            LayoutInflater.from(context).inflate(R.layout.recycleview_item,parent,false);
+        }else if(type==1){
+            view=LayoutInflater.from(context).inflate(R.layout.recycleview_item,parent,false);
 
         }
 
         return new Holder(view);
+    }
+
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        //super.onAttachedToRecyclerView(recyclerView);
+        RecyclerView.LayoutManager layoutManager=recyclerView.getLayoutManager();
+        if(layoutManager instanceof GridLayoutManager){
+            final GridLayoutManager gridLayoutManager= (GridLayoutManager) layoutManager;
+            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+                @Override
+                public int getSpanSize(int position) {
+
+                    return getItemViewType(position)==0?gridLayoutManager.getSpanCount():1;
+                }
+            });
+        }
     }
 
     @Override

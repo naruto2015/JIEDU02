@@ -41,6 +41,9 @@ public class LoadDataScrollController extends RecyclerView.OnScrollListener impl
      */
     private OnRecycleRefreshListener mListener;
 
+    public LoadDataScrollController(OnRecycleRefreshListener onRecycleRefreshListener) {
+        this.mListener = onRecycleRefreshListener;
+    }
 
     @Override
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {

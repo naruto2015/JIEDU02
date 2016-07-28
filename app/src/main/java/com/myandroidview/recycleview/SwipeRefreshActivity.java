@@ -1,5 +1,6 @@
 package com.myandroidview.recycleview;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -13,7 +14,7 @@ import com.myandroidview.activity.R;
 
 import utils.DividerItemDecoration;
 
-public class SwipeRefreshActivity extends AppCompatActivity implements LoadDataScrollController.OnRecycleRefreshListener {
+public class SwipeRefreshActivity extends Activity implements LoadDataScrollController.OnRecycleRefreshListener {
 
     /*
      使用原生的SwipeRefreshLayout和代码判断
@@ -27,7 +28,6 @@ public class SwipeRefreshActivity extends AppCompatActivity implements LoadDataS
     private HomeAdapter mAdapter;
 
     private LoadDataScrollController mController;
-
 
     private ProgressDialog pd;
 
@@ -52,7 +52,6 @@ public class SwipeRefreshActivity extends AppCompatActivity implements LoadDataS
 
         //添加分割线
         mRecycle.addItemDecoration(new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL_LIST));
-
         mRecycle.setLayoutManager(layoutManager);
         mRecycle.setItemAnimator(new DefaultItemAnimator());
         mRecycle.setAdapter(mAdapter);

@@ -41,7 +41,7 @@ public class CustomView1 extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         paint.setStyle(Paint.Style.STROKE);
-        canvas.translate(canvas.getWidth()/2,200);
+        canvas.translate(canvas.getWidth()/2,200);  //将位置移动画纸的坐标点:150,150
         canvas.drawCircle(0,0,100,paint);
 
         //使用path绘制路径文字
@@ -79,8 +79,6 @@ public class CustomView1 extends View{
 
                 canvas.drawText(String.valueOf(i/5+1), -4f, y+25f, tmpPaint);
 
-
-
             }else{
 
                 canvas.drawLine(0f, y, 0f, y +5f, tmpPaint);
@@ -90,7 +88,6 @@ public class CustomView1 extends View{
             canvas.rotate(360/count,0f,0f); //旋转画纸
 
         }
-
 
 
         //绘制指针

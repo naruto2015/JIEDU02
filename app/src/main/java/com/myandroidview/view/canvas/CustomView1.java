@@ -63,13 +63,9 @@ public class CustomView1 extends View{
 
         tmpPaint.setStrokeWidth(1);
 
-
-
         float  y=100;
 
         int count = 60; //总刻度数
-
-
 
         for(int i=0 ; i <count ; i++){
 

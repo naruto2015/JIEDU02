@@ -20,7 +20,6 @@ public class SwipeRefreshActivity extends Activity implements LoadDataScrollCont
      使用原生的SwipeRefreshLayout和代码判断
      实现RecyclewView 的刷新和加载更多
      */
-
     private SwipeRefreshLayout mSwipeRefresh;
 
     private RecyclerView mRecycle;
@@ -59,7 +58,6 @@ public class SwipeRefreshActivity extends Activity implements LoadDataScrollCont
 
         mRecycle.setOnScrollListener(mController);
         mSwipeRefresh.setOnRefreshListener(mController);
-
     }
 
     @Override
@@ -78,7 +76,6 @@ public class SwipeRefreshActivity extends Activity implements LoadDataScrollCont
 
     @Override
     public void loadMore() {
-
         //加载更多的接口回调
         pd=new ProgressDialog(this);
         pd.show();

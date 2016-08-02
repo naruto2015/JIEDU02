@@ -24,8 +24,8 @@ public class SloopView3 extends View{
     private Paint mPaint=new Paint();
     private void initPaint(){
         //mPaint.setColor(Color.BLACK);
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setStrokeWidth(10f);
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setStrokeWidth(1f);
 
     }
 
@@ -65,17 +65,29 @@ public class SloopView3 extends View{
         canvas.drawRect(rectF,mPaint);
         */
 
-        mPaint.setColor(Color.BLUE);
+      /*  mPaint.setColor(Color.BLUE);
         RectF rectF=new RectF(-400,-400,400,400);
         canvas.translate(mWidth/2,mHeight/2);
         canvas.drawRect(rectF,mPaint);
         for(int i=0;i<20;i++){
-
             //scale 与 translet一样也是叠加的
             canvas.scale(0.9f,0.9f);
             canvas.drawRect(rectF,mPaint);
 
         }
+*/
+
+        // 将坐标系原点移动到画布正中心
+        canvas.translate(mWidth / 2, mHeight / 2);
+        canvas.drawCircle(0,0,200,mPaint);          // 绘制两个圆形
+        canvas.drawCircle(0,0,180,mPaint);
+
+        for (int i=0; i<=35; i+=1){               // 绘制圆形之间的连接线
+            canvas.drawLine(0,180,0,200,mPaint);
+            canvas.rotate(10);
+        }
+
+
 
     }
 

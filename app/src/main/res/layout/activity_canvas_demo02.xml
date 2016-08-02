@@ -6,7 +6,15 @@
     tools:context="com.myandroidview.view.canvas.CanvasDemo02Activity">
 
 
-    <com.myandroidview.view.canvas.SloopView3
+   <!-- <com.myandroidview.view.canvas.SloopView3
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+  <!--  <com.myandroidview.view.canvas.Bezier
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+    <com.myandroidview.view.canvas.CustomView1
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

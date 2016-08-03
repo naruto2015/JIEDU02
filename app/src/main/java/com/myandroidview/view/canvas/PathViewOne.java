@@ -21,7 +21,6 @@ public class PathViewOne extends View{
 
     private Handler handler=null;
 
-    private long time=5000;
     private long CurrentX=99;
     private long CurrentY=99;
 
@@ -84,8 +83,6 @@ public class PathViewOne extends View{
         circlePaint.setStyle(Paint.Style.FILL);
         canvas.drawCircle(CurrentX,CurrentY,5,fillPaint);
 
-      /*  Message msg=Message.obtain();
-        msg.what=1;*/
        handler.sendEmptyMessageDelayed(1,100);
 
     }

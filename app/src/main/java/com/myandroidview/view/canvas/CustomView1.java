@@ -104,4 +104,13 @@ public class CustomView1 extends View{
 
 
     }
+
+
+
+    public void setPoint(){
+
+    }
+
+
+
 }

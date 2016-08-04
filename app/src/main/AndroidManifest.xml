@@ -31,16 +31,14 @@
         <activity android:name="com.myandroidview.eventbus3.EventBusSecondActivity" />
         <activity android:name="com.myandroidview.rxjava.RxJavaDemoActivity" />
         <activity android:name="com.myandroidview.view.canvas.CanvasDemoActivity" />
-        <activity android:name="com.myandroidview.view.canvas.CanvasDemo02Activity">
-
-        </activity>
+        <activity android:name="com.myandroidview.view.canvas.CanvasDemo02Activity"></activity>
         <activity android:name="com.myandroidview.recycleview.RecycleViewDemoActivity" />
         <activity
             android:name="com.myandroidview.recycleview.SwipeRefreshActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"></activity>
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
             android:name="com.myandroidview.recycleview.swipetoloadlayout.SwipeToLayoutActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"></activity>
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity android:name="com.myandroidview.animation.ObjectAnimActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +46,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.myandroidview.animation.ValueAnimatorActivity"></activity>
     </application>
 
 </manifest>

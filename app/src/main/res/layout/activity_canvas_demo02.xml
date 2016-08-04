@@ -14,12 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />-->
 
-   <com.myandroidview.view.canvas.CustomView1
+  <!-- <com.myandroidview.view.canvas.CustomView1
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" />-->
 
    <!-- <com.myandroidview.view.canvas.PathViewOne
         android:layout_width="match_parent"
         android:layout_height="match_parent" />-->
+
+   <com.myandroidview.view.canvas.PosTanView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
 
 </RelativeLayout>

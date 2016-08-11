@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.myandroidview.activity"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
@@ -29,4 +29,5 @@ dependencies {
     compile project(':library')
     //noinspection GradleCompatible
     compile 'com.android.support:recyclerview-v7:24.0.0-beta1'
+    compile 'com.jakewharton:butterknife:5.1.1'
 }

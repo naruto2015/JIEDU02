@@ -39,7 +39,7 @@
         <activity
             android:name="com.myandroidview.recycleview.swipetoloadlayout.SwipeToLayoutActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
-        <activity android:name="com.myandroidview.animation.ObjectAnimActivity"></activity>
+        <activity android:name="com.myandroidview.animation.ObjectAnimActivity" />
         <activity android:name="com.myandroidview.animation.ValueAnimatorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,7 +47,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.myandroidview.animation.AnimatorSetActivity"></activity>
+        <activity android:name="com.myandroidview.animation.AnimatorSetActivity" />
+        <activity android:name="com.myandroidview.animation.XmlAnimActivity" />
+        <activity android:name=".LayoutAnimaActivity"></activity>
     </application>
 
 </manifest>

@@ -13,28 +13,44 @@ import android.widget.Toast;
 import com.myandroidview.eventbus.FirstEvent;
 import com.myandroidview.eventbus.SecondActivity;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
 
 public class MainActivity extends Activity {
 
+    @InjectView(R.id.btn_try)
     Button btn;
+
+    @InjectView(R.id.tv)
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);//
         EventBus.getDefault().register(this);
-        btn = (Button) findViewById(R.id.btn_try);
-        tv = (TextView)findViewById(R.id.tv);
+       /* btn = (Button) findViewById(R.id.btn_try);
+        tv = (TextView)findViewById(R.id.tv);*/
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        ButterKnife.inject(this);
+
+       /* btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),
                         SecondActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
+    }
+
+    //为控件添加一个响应函数
+    @OnClick(R.id.btn_try)
+    public void submit(){
+        Intent intent = new Intent(getApplicationContext(),
+                SecondActivity.class);
+        startActivity(intent);
     }
 
     public void onEventMainThread(FirstEvent event) {
